@@ -11,7 +11,7 @@ main: main.css
 all: $(ALLCSS)
 
 stats: $(ALLCSS)
-	@wc -l $^ | sort -n
+	@wc -c $^ | sort -n
 
 main.css: $(SRCLESS)
 
