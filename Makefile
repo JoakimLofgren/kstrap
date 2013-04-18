@@ -6,5 +6,7 @@ endif
 
 all: main.css
 
+main.css: $(wildcard src/*.less)
+
 %.css: src/%.less
 	$(LESSC) $< > $@
