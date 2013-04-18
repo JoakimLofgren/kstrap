@@ -1,4 +1,5 @@
 @import "colors";
+@import "gradient";
 
 header {
     width: 100%;
@@ -8,15 +9,15 @@ header {
     margin-bottom: 10px;
 
     .gradient(lighten(@klarna-blue, 5%), @klarna-blue);
-}
 
-header .logo {
-    margin-left: 100px;
-    margin-top: 6px;
-    width: 90px;
-    height: 24px;
-    background-image: url(//cdn.klarna.com/public/images/SE/logos/v1/basic/SE_basic_logo_std_white.png?width=90);
-    display: inline-block;
+    .logo {
+        margin-left: 100px;
+        margin-top: 6px;
+        width: 90px;
+        height: 24px;
+        background-image: url(//cdn.klarna.com/public/images/SE/logos/v1/basic/SE_basic_logo_std_white.png?width=90);
+        display: inline-block;
+    }
 }
 
 body.sticky-header {
