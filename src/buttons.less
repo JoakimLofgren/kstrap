@@ -1,9 +1,12 @@
 @import "colors";
 @import "border-radius";
 @import "box-shadow";
+@import "gradient";
 
 // Main button
-.button {
+button {
+    @c-shadow-a: rgba(255, 255, 255, 0.25);
+    @c-shadow-b: rgba(0, 0, 0, 0.3);
     color: #FFFFFF;
     display: inline-block;
     font-size: 13px;
@@ -25,42 +28,21 @@
     &:focus {
         outline: none;
     }
-}
 
-// Blue - Primary
-.button.blue {
-    text-shadow: 0 1px 1px @c-textShadowBlue;
-    background: @c-darkBlue;
-    background: -ms-linear-gradient(top, @c-blue 0%, @c-darkBlue 100%);
-    background: -moz-linear-gradient(top, @c-blue 0%, @c-darkBlue 100%);
-    background: -o-linear-gradient(top, @c-blue 0%, @c-darkBlue 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, @c-blue), color-stop(1, @c-darkBlue));
-    background: -webkit-linear-gradient(top, @c-blue 0%, @c-darkBlue 100%);
-    background: linear-gradient(to bottom, @c-blue 0%, @c-darkBlue 100%);
-    border: 1px solid @c-borderBlueDark;
-    .box-shadow (inset 0 1px 2px 0 rgba(255, 255, 255, 0.25));
-    
+    .box-shadow (inset 0 1px 2px 0 @c-shadow-a);
     &:hover, :focus {
-        .box-shadow (0 1px 4px 0 rgba(0, 0, 0, 0.3), inset 0 1px 2px 0 rgba(255, 255, 255, 0.5))
+        .box-shadow (0 1px 4px 0 @c-shadow-b, inset 0 1px 2px 0 @c-shadow-a);
     }
-}
 
-// Orange - Action
-.button.orange {
-    min-width:60px;
-    text-shadow: 0 1px 1px @c-textShadowOrange;
-    background: @c-darkOrange;
-    background: -ms-linear-gradient(top, @c-orange 0%, @c-darkOrange 100%);
-    background: -moz-linear-gradient(top, @c-orange 0%, @c-darkOrange 100%);
-    background: -o-linear-gradient(top, @c-orange 0%, @c-darkOrange 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, @c-orange), color-stop(1, @c-darkOrange));
-    background: -webkit-linear-gradient(top, @c-orange 0%, @c-darkOrange 100%);
-    background: linear-gradient(to bottom, @c-orange 0%, @c-darkOrange 100%);
-    border: 1px solid @c-borderOrangeDark;
+    text-shadow: 0 1px 1px @c-textShadowBlue;
+    .gradient (@c-blue, @c-darkBlue);
+    border: 1px solid @c-borderBlueDark;
 
-    .box-shadow (inset 0 1px 2px 0 rgba(255, 255, 255, 0.25));
-
-    &:hover, :focus {
-        .box-shadow (0 1px 4px 0 rgba(0, 0, 0, 0.3), inset 0 1px 2px 0 rgba(255, 255, 255, 0.5))
+    // Orange - Action
+    &.action {
+        min-width: 60px;
+        .gradient (@c-orange, @c-darkOrange);
+        text-shadow: 0 1px 1px @c-textShadowOrange;
+        border: 1px solid @c-borderOrangeDark;
     }
 }
