@@ -1,0 +1,29 @@
+header {
+    width: 100%;
+    height: 36px;
+    background: blue;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    .gradient(lighten(#0089cf, 5%), #0089cf);
+}
+
+header .logo {
+    margin-left: 100px;
+    margin-top: 6px;
+    width: 90px;
+    height: 24px;
+    background-image: url(//cdn.klarna.com/public/images/SE/logos/v1/basic/SE_basic_logo_std_white.png?width=90);
+    display: inline-block;
+}
+
+body.sticky-header {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+    }
+
+    padding-top: 36px;
+}
