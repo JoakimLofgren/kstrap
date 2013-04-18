@@ -34,6 +34,14 @@ form {
 
             .box-shadow(0 0 4px 0 rgb(0, 137, 208));
         }
+
+        &:invalid {
+            border: 1px solid @c-input-error-border;
+
+            &:focus {
+                .box-shadow(0 0 4px 2px rgb(251, 197, 197));
+            }
+        }
     }
 
     button {
