@@ -8,20 +8,43 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="main.css">
+        <style>
+            #nestedmenu {
+                width: 250px;
+            }
+        </style>
     </head>
     <body>
         <header id="klarna_header">
             <span class="logo"></span>
         </header>
-        <div class="hmenu">
+        <div>
             <ul class="hmenu">
-                <li class="menuitem active"><a href="#spam">spam</a></li>
-                <li class="menuitem"><a href="#egg">egg</a></li>
-                <li class="menuitem"><a href="#bacon">bacon</a></li>
+                <li class="active"><a href="#spam">spam</a></li>
+                <li><a href="#egg">egg</a></li>
+                <li><a href="#bacon">bacon</a></li>
             </ul>
         </div>
 
-
+        <div id="nestedmenu">
+            <ul class="menu">
+                <li class="active"><a href="#spam">one</a></li>
+                <li>
+                    <a href="#egg">two</a>
+                    <ul class="menu">
+                        <li><a href="#egg.1">2.1</a></li>
+                        <li>
+                            <a href="#egg.2">2.2</a>
+                            <ul class="menu">
+                                <li><a href="#egg.1">2.2.1</a></li>
+                                <li><a href="#egg.1">2.2.2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#bacon">three</a></li>
+            </ul>
+        </div>
     <form>
         <label for="email">Email</label>
         <input id="email" required placeholder="Email address" type="text">
