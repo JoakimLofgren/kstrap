@@ -1,0 +1,42 @@
+@import "colors";
+
+#menu {
+    @highlight: darken(@background, 5%);
+
+    .horizontal () {
+        li {
+            margin-left: 10px;
+            float: left;
+            &:first-child {
+                margin-left: 0px;  
+            }
+        }
+    }
+
+    .item () {
+        padding: 4px;
+
+        &:hover {
+            background-color: @highlight;
+        }
+
+        &.active {
+            background-color: @klarna-blue;
+            color: white;
+        }
+    }
+}
+
+.menu {
+    padding-left: 8px;
+    list-style: none;
+
+    li {
+        #menu > .item;
+    }
+}
+
+.hmenu {
+    .menu;
+    #menu > .horizontal;
+}
