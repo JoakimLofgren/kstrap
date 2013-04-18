@@ -19,8 +19,8 @@ form {
 
     input {
         background: white;
-        border: 1px solid rgb(204, 204, 204);
-        color: rgb(85, 85, 85);
+        border: 1px solid @c-input-border;
+        color: @c-input-text;
         display: block;
         font: 14px Arial,sans-serif;
         outline: medium none;
@@ -30,7 +30,7 @@ form {
         .box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.25) inset);
 
         &:focus {
-            border: 1px solid rgb(0, 109, 186);
+            border: 1px solid @c-input-focus-border;
 
             .box-shadow(0 0 4px 0 rgb(0, 137, 208));
         }
