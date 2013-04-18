@@ -1,5 +1,6 @@
 @import "colors";
 @import "border-radius";
+@import "box-shadow";
 
 // Main button
 .button {
@@ -37,14 +38,10 @@
     background: -webkit-linear-gradient(top, @c-blue 0%, @c-darkBlue 100%);
     background: linear-gradient(to bottom, @c-blue 0%, @c-darkBlue 100%);
     border: 1px solid @c-borderBlueDark;
-    -moz-box-shadow:    inset 0 1px 2px 0 rgba(255,255,255,0.25);
-    -webkit-box-shadow: inset 0 1px 2px 0 rgba(255,255,255,0.25);
-    box-shadow:         inset 0 1px 2px 0 rgba(255,255,255,0.25);
+    .box-shadow (inset 0 1px 2px 0 rgba(255, 255, 255, 0.25));
     
     &:hover, :focus {
-    -moz-box-shadow:    0 1px 4px 0 rgba(0,0,0,0.3), inset 0 1px 2px 0 rgba(255,255,255,0.5);
-    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3), inset 0 1px 2px 0 rgba(255,255,255,0.5);
-    box-shadow:         0 1px 4px 0 rgba(0,0,0,0.3), inset 0 1px 2px 0 rgba(255,255,255,0.5);
+        .box-shadow (0 1px 4px 0 rgba(0, 0, 0, 0.3), inset 0 1px 2px 0 rgba(255, 255, 255, 0.5))
     }
 }
 
@@ -60,13 +57,10 @@
     background: -webkit-linear-gradient(top, @c-orange 0%, @c-darkOrange 100%);
     background: linear-gradient(to bottom, @c-orange 0%, @c-darkOrange 100%);
     border: 1px solid @c-borderOrangeDark;
-    -moz-box-shadow:    inset 0 1px 2px 0 rgba(255,255,255,0.25);
-    -webkit-box-shadow: inset 0 1px 2px 0 rgba(255,255,255,0.25);
-    box-shadow:         inset 0 1px 2px 0 rgba(255,255,255,0.25);
-    
+
+    .box-shadow (inset 0 1px 2px 0 rgba(255, 255, 255, 0.25));
+
     &:hover, :focus {
-    -moz-box-shadow:    0 1px 4px 0 rgba(0,0,0,0.3), inset 0 1px 2px 0 rgba(255,255,255,0.5);
-    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3), inset 0 1px 2px 0 rgba(255,255,255,0.5);
-    box-shadow:         0 1px 4px 0 rgba(0,0,0,0.3), inset 0 1px 2px 0 rgba(255,255,255,0.5);
+        .box-shadow (0 1px 4px 0 rgba(0, 0, 0, 0.3), inset 0 1px 2px 0 rgba(255, 255, 255, 0.5))
     }
 }
