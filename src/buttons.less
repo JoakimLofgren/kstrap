@@ -1,17 +1,9 @@
-@import 'colors';
-
-.rounded-corners-1 (@radius: 1px) {
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  -ms-border-radius: @radius;
-  -o-border-radius: @radius;
-  border-radius: @radius;
-}
+@import "colors";
+@import "border-radius";
 
 // Main button
 .button {
-    .rounded-corners-1;
-    color: #FFFFFF;    
+    color: #FFFFFF;
     display: inline-block;
     font-size: 13px;
     font-family: Arial, sans-serif;
@@ -21,16 +13,18 @@
     outline: none;
     padding: 6px 10px 7px 10px;
     vertical-align: top;
-}
-.button::-moz-focus-inner {
-    border: 0;
-}
- .button:focus {
-    outline: none ;
-}
- .button span,
- .button span:focus {
-    outline: none ;
+
+    .border-radius(1px);
+
+    &::-moz-focus-inner {
+        border: 0;
+    }
+
+    span,
+    span:focus,
+    &:focus {
+        outline: none;
+    }
 }
 
 // Primary button
