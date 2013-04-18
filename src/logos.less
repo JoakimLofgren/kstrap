@@ -1,0 +1,43 @@
+.logo-url (@width, @name: "blue-black") {
+    @base-url: "//cdn.klarna.com/public/images/SE/logos/v1/basic/";
+    background-image: url("@{base-url}SE_basic_logo_std_@{name}.png?width=@{width}");
+    background-repeat: no-repeat;
+}
+
+.logo {
+    display: inline-block;
+
+    width: 250px;
+    height: 67px;
+    .logo-url(250);
+
+    &.small {
+        width: 90px;
+        height: 24px;
+        .logo-url(90);
+
+        &.white {
+            .logo-url(90, "white");
+        }
+    }
+
+    &.medium {
+        width: 150px;
+        height: 40px;
+        .logo-url(150);
+
+        &.white {
+            .logo-url(150, "white");
+        }
+    }
+
+    &.large {
+        width: 300px;
+        height: 81px;
+        .logo-url(300);
+
+        &.white {
+            .logo-url(300, "white");
+        }
+    }
+}
