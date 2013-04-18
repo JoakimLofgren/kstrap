@@ -1,3 +1,5 @@
+@import "clearfix";
+
 /////////////////
 // Semantic.gs // for LESS: http://lesscss.org/
 /////////////////
@@ -16,20 +18,6 @@
 // Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
 // @min-width: 960;
 // @correction: 0.5 / @min-width * 100 * 1%;
-
-// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix() {
-	*zoom:1;
-	
-	&:before,
-	&:after {
-	    content:"";
-	    display:table;
-	}
-	&:after {
-	    clear:both;
-	}
-}
 
 
 //////////
