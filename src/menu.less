@@ -1,6 +1,7 @@
 @import "colors";
 @import "clearfix";
 @import "fonts";
+@import "border-radius";
 
 #menu {
     @c-highlight: darken(@c-background, 5%);
@@ -16,6 +17,10 @@
             }
             min-width: 45px;
             text-align: center;
+
+            > a {
+                .border-radius (5px);
+            }
         }
     }
 
