@@ -4,9 +4,19 @@ else
 	LESSC=lessc -x
 endif
 
-all: main.css
+SRCLESS=$(wildcard src/*.less)
+ALLCSS=$(patsubst src/%.less, %.css, $(SRCLESS))
 
-main.css: $(wildcard src/*.less)
+main: main.css
+all: $(ALLCSS)
+
+stats: $(ALLCSS)
+	@wc -l $^ | sort -n
+
+main.css: $(SRCLESS)
+
+clean:
+	rm *.css
 
 %.css: src/%.less
 	$(LESSC) $< > $@
