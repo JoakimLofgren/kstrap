@@ -1,0 +1,52 @@
+@import 'colors';
+
+// The Klarna font
+@font-face  {
+    font-family:'KlarnaSans';
+    src:url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSans.eot);
+    src:url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSans.eot?#iefix) format('embedded-opentype'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSans.woff) format('woff'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSans.ttf) format('truetype'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSans.svg#KlarnaSansLight) format('svg');
+}
+@font-face  {
+    font-family:'KlarnaSansLight';
+    src:url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansLight.eot);
+    src:url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansLight.eot?#iefix) format('embedded-opentype'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansLight.woff) format('woff'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansLight.ttf) format('truetype'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansLight.svg#KlarnaSansLight) format('svg');
+} 
+@font-face  {
+    font-family:'KlarnaSansMedium';    
+    src:url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansMedium.eot);
+    src:url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansMedium.eot?#iefix) format('embedded-opentype'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansMedium.woff) format('woff'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansMedium.ttf) format('truetype'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansv.svg#KlarnaSansLight) format('svg');
+}
+
+// Font styles
+h1, h2, h3, h4 {
+    font-family: KlarnaSansLight, Arial, sans-serif;
+    margin: 0;
+    font-weight: normal;
+}
+h1 {
+    color: @klarna-blue;
+    font-size: 3em;
+}
+h2 {
+    color: @klarna-blue;
+    font-size: 2em;
+}
+h3 {
+    color: @klarna-black;
+    font-size: 1.5em;
+}
+h4 {
+    color: @klarna-black;
+    font-size: 1em;
+    font-weight: bold;
+}
+p   {
+        color: @klarna-black;
+        font-family: Arial, sans-serif;
+        font-size: 1em;
+        line-height: 1.5em;
+        margin-bottom: 1em;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
