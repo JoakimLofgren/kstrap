@@ -1,7 +1,7 @@
 @import "colors";
 
 #menu {
-    @highlight: darken(@background, 5%);
+    @c-highlight: darken(@c-background, 5%);
 
     .horizontal () {
         li {
@@ -17,11 +17,11 @@
         padding: 4px;
 
         &:hover {
-            background-color: @highlight;
+            background-color: @c-highlight;
         }
 
         &.active {
-            background-color: @klarna-blue;
+            background-color: @c-blue;
             color: white;
         }
     }
