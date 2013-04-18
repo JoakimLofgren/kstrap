@@ -1,4 +1,17 @@
 @import "normalize";
 
+@import "grid";
 @import "header";
 @import "menu";
+
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+article {
+    .column(9)
+}
+
+section {
+    .column(3)
+}
