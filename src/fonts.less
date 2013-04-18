@@ -17,9 +17,19 @@
     src:url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansMedium.eot?#iefix) format('embedded-opentype'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansMedium.woff) format('woff'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansMedium.ttf) format('truetype'), url(://klarna.com/sites/all/themes/klarna/css/fonts/KlarnaSansv.svg#KlarnaSansLight) format('svg');
 }
 
+#font {
+    .plain () {
+        font-family: Arial, sans-serif;
+    }
+
+    .klarna () {
+        font-family: KlarnaSansLight, Arial, sans-serif;
+    }
+}
+
 // Font styles
 h1, h2, h3, h4 {
-    font-family: KlarnaSansLight, Arial, sans-serif;
+    #font > .klarna;
     margin: 0;
     font-weight: normal;
 }
@@ -40,13 +50,16 @@ h4 {
     font-size: 1em;
     font-weight: bold;
 }
-p   {
+p {
+        #font > .plain;
         color: @klarna-black;
-        font-family: Arial, sans-serif;
         font-size: 1em;
         line-height: 1.5em;
         margin-bottom: 1em;
     &:last-child {
         margin-bottom: 0;
     }
+}
+a {
+    #font > .plain;
 }
